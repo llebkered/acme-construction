@@ -1,0 +1,55 @@
+items:
+    -
+        title: 'Home Page'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: home-page
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'About Us'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: about-us
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Contact Us'
+        type: cms-page
+        code: ''
+        reference: contact-us
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Employment
+        type: cms-page
+        code: ''
+        reference: employment
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Projects
+        type: cms-page
+        code: ''
+        reference: projects
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main Menu'

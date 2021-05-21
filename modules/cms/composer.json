@@ -1,0 +1,39 @@
+{
+    "name": "winter/wn-cms-module",
+    "type": "winter-module",
+    "description": "CMS module for Winter CMS",
+    "homepage": "https://wintercms.com",
+    "keywords": ["winter cms", "winter", "cms"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Bobkov",
+            "email": "aleksey.bobkov@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Samuel Georges",
+            "email": "daftspunky@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Luke Towers",
+            "email": "wintercms@luketowers.ca",
+            "role": "Lead Maintainer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "dev-main as 1.0",
+        "laravel/framework": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cms\\": ""
+        }
+    },
+    "extra": {
+        "installer-name": "cms"
+    },
+    "minimum-stability": "dev"
+}

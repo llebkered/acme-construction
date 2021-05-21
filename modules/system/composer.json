@@ -1,0 +1,40 @@
+{
+    "name": "winter/wn-system-module",
+    "type": "winter-module",
+    "description": "System module for Winter CMS",
+    "homepage": "https://wintercms.com",
+    "keywords": ["winter cms", "winter", "system"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Bobkov",
+            "email": "aleksey.bobkov@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Samuel Georges",
+            "email": "daftspunky@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Luke Towers",
+            "email": "wintercms@luketowers.ca",
+            "role": "Lead Maintainer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "dev-main as 1.0",
+        "laravel/framework": "~6.0",
+        "composer/semver": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "System\\": ""
+        }
+    },
+    "extra": {
+        "installer-name": "system"
+    },
+    "minimum-stability": "dev"
+}

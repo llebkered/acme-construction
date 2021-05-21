@@ -1,0 +1,33 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    name:
+        span: left
+        label: winter.pages::lang.menu.name
+        placeholder: winter.pages::lang.menu.new_name
+        attributes:
+            default-focus: 1
+
+    code:
+        span: right
+        placeholder: winter.pages::lang.menu.new_code
+        label: winter.pages::lang.menu.code
+        preset:
+            field: name
+            type: file
+
+    toolbar:
+        type: partial
+        path: menu_toolbar
+        cssClass: collapse-visible
+
+tabs:
+    stretch: true
+    cssClass: master-area
+    fields:
+        items:
+            stretch: true
+            tab: winter.pages::lang.menu.items
+            type: Winter\Pages\FormWidgets\MenuItems

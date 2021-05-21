@@ -1,0 +1,69 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    search:
+        type: Winter\Pages\FormWidgets\MenuItemSearch
+
+    title:
+        span: left
+        label: winter.pages::lang.menuitem.title
+
+    type:
+        span: right
+        label: winter.pages::lang.menuitem.type
+        type: dropdown
+
+    url:
+        label: winter.pages::lang.menuitem.url
+
+    reference:
+        label: winter.pages::lang.menuitem.reference
+        type: dropdown
+        cssClass: input-sidebar-control
+
+    cmsPage:
+        label: winter.pages::lang.menuitem.cms_page
+        comment: winter.pages::lang.menuitem.cms_page_comment
+        type: dropdown
+        cssClass: input-sidebar-control
+
+    nesting:
+        label: winter.pages::lang.menuitem.allow_nested_items
+        comment: winter.pages::lang.menuitem.allow_nested_items_comment
+        type: checkbox
+        default: true
+
+    replace:
+        label: winter.pages::lang.menuitem.replace
+        comment: winter.pages::lang.menuitem.replace_comment
+        type: checkbox
+        default: true
+
+tabs:
+    fields:
+        viewBag[isHidden]:
+            label: winter.pages::lang.menuitem.hidden
+            comment: winter.pages::lang.menuitem.hidden_comment
+            type: checkbox
+            tab: winter.pages::lang.menuitem.display_tab
+
+        code:
+            label: winter.pages::lang.menuitem.code
+            comment: winter.pages::lang.menuitem.code_comment
+            tab: winter.pages::lang.menuitem.attributes_tab
+            span: auto
+
+        viewBag[cssClass]:
+            label: winter.pages::lang.menuitem.css_class
+            comment: winter.pages::lang.menuitem.css_class_comment
+            tab: winter.pages::lang.menuitem.attributes_tab
+            span: auto
+
+        viewBag[isExternal]:
+            label: winter.pages::lang.menuitem.external_link
+            comment: winter.pages::lang.menuitem.external_link_comment
+            type: checkbox
+            tab: winter.pages::lang.menuitem.attributes_tab
