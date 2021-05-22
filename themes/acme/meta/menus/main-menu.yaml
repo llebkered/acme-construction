@@ -1,13 +1,9 @@
 items:
     -
         title: 'Home Page'
-        nesting: null
         type: cms-page
-        url: null
         code: ''
-        reference: home-page
-        cmsPage: null
-        replace: null
+        reference: home
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -27,27 +23,39 @@ items:
             isExternal: '0'
     -
         title: 'Contact Us'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: contact-us
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Employment
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: employment
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Projects
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: projects
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
