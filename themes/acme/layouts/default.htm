@@ -6,39 +6,46 @@ default = 0
 ==
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ this.page.title }} | ACME Construction</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}"> -->
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
-        {% styles %}
-    </head>
-    <body>
 
-        <!-- Header -->
-        <header id="layout-header">
-            {% partial 'site/header' %}
-        </header>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }} | ACME Construction</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}"> -->
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
 
-        <!-- Content -->
-        <main class="main" id="layout-content">
+<body>
+
+    <!-- Header -->
+    <header class="header" id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+
+    <!-- Content -->
+    <main class="main" id="layout-content">
+        <div class="container">
             {% page %}
-        </main>
+        </div>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer" id="layout-footer">
+    <!-- Footer -->
+    <footer class="footer" id="layout-footer">
+        <div class="container">
             {% partial 'site/footer' %}
-        </footer>
+        </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-        {% framework extras %}
-        {% scripts %}
+    <!-- Scripts -->
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
 
-    </body>
+</body>
+
 </html>

@@ -1,3 +1,14 @@
+:root {
+  --color-text: #222222;
+  --bg: #eee;
+  --glaucous: #6484a4ff;
+  --alice-blue: #ebf2faff;
+  --shiny-shamrock: #4c9f70ff;
+  --smoky-black: #0b0500ff;
+  --eerie-black: #201e1fff;
+  --white: #EEE;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -361,11 +372,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: var(--shiny-shamrock);
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: #222222;
+  color: var(--color-text);
   text-decoration: underline;
 }
 
@@ -373,7 +384,7 @@ a:hover, a:active, a:focus {
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: var(--color-text);
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -434,5 +445,34 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.header {
+  background-color: var(--glaucous);
+  color: var(--white);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header a {
+  color: var(--white);
+}
+
+.footer {
+  background-color: var(--eerie-black);
+  color: var(--white);
+  padding-bottom: 4em;
+  padding-top: 4em;
+}
+.footer a {
+  color: var(--white);
+}
+
+.nav-menu {
+  list-style: none;
+}
+.nav-menu li {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

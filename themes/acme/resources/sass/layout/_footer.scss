@@ -1,3 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+    background-color: var(--eerie-black);
+    color: var(--white);
+    padding-bottom: 4em;
+    padding-top: 4em;
+
+    a {
+        color: var(--white);
+    }
+}

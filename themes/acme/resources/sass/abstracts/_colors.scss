@@ -1,0 +1,32 @@
+/// Copy text color
+
+
+:root {
+    --color-text: #222222;
+    --bg: #eee;
+    --glaucous: #6484a4ff;
+    --alice-blue: #ebf2faff;
+    --shiny-shamrock: #4c9f70ff;
+    --smoky-black: #0b0500ff;
+    --eerie-black: #201e1fff;
+    --white: #EEE;
+}
+
+/// @type Color
+$text-color: var(--color-text);
+
+/// Main brand color
+/// @type Color
+$brand-color: var(--shiny-shamrock);
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;

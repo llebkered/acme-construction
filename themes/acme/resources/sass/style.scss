@@ -3,6 +3,7 @@
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
+  'abstracts/colors',
   'abstracts/functions',
   'abstracts/mixins';
 
@@ -24,7 +25,8 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/nav-menu';
 
 // 6. Page-specific styles
 @import

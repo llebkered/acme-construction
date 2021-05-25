@@ -1,0 +1,8 @@
+==
+<?php
+function onStart() {
+    $this['svgContents'] = File::get(base_path($this->file));
+}
+?>
+==
+{{ svgContents|raw }}

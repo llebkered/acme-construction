@@ -136,9 +136,9 @@ function scripts() {
 
 // Add browsersync initialization at the start of the watch task
 function watch() {
-
     gulp.watch(paths.styles.src, style);
-
+    gulp.watch(paths.images.src, images);
+    gulp.watch(paths.scripts.src, scripts);
 }
 
 // Copy vendor files to assets

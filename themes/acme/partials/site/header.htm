@@ -1,7 +1,7 @@
+[viewBag]
+
 [staticMenu]
 code = "main-menu"
-
-[viewBag]
 ==
 <?php
 function onStart()
@@ -10,9 +10,19 @@ function onStart()
 }
 ?>
 ==
-<!-- Nav -->
-<nav id="layout-nav" class="navbar" role="navigation">
-    <div class="container">
-        {% component 'staticMenu' %}
+<div class="container">
+    <div class="logo">
+        {% partial "site/include-svg" file="themes/acme/assets/images/logo.svg" %}
     </div>
-</nav>
+    <!-- Nav -->
+    <nav id="layout-nav" class="navbar" role="navigation">
+        <div class="container">
+            {% if staticMenu.menuItems %}
+            <ul class="nav-menu">
+                {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+            </ul>
+            {% endif %}
+        </div>
+
+    </nav>
+</div>
