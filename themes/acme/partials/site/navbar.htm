@@ -1,0 +1,17 @@
+[viewBag]
+
+[staticMenu]
+code = "main-menu"
+==
+
+<!-- Nav -->
+<nav id="layout-nav" class="navbar" role="navigation">
+    <div class="container">
+        {% if staticMenu.menuItems %}
+        <div id="menuButton">Menu</div>
+        <ul class="nav-menu" id="menuList">
+            {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+        </ul>
+        {% endif %}
+    </div>
+</nav>

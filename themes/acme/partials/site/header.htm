@@ -12,17 +12,7 @@ function onStart()
 ==
 <div class="container">
     <div class="logo">
-        {% partial "site/include-svg" file="themes/acme/assets/images/logo.svg" %}
+        <a href="{{"/"|app}}">{% partial "site/include-svg" file="themes/acme/assets/images/logo.svg" %}</a>
     </div>
-    <!-- Nav -->
-    <nav id="layout-nav" class="navbar" role="navigation">
-        <div class="container">
-            {% if staticMenu.menuItems %}
-            <ul class="nav-menu">
-                {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
-            </ul>
-            {% endif %}
-        </div>
-
-    </nav>
+    {% partial "site/navbar" %}
 </div>

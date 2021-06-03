@@ -1,6 +1,39 @@
+#menuButton {
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
 .nav-menu {
+    background-color: var(--glaucous);
     list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    transform: translateX(120%);
+    transition: all ease 300ms;
     li {
         display: inline-block;
+        padding: 0.25rem;
+    }
+    &--is-open {
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #menuButton {
+        display: none;
+    }
+    .nav-menu {
+        flex-direction: row;
+        margin-top: 1rem;
+        position: static;
+        transform: translateX(0);
+        transition: none;
     }
 }
