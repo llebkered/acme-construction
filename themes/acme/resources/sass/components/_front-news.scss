@@ -1,0 +1,27 @@
+.front-news {
+    background-color: var(--eerie-black);
+    color: var(--white);
+    padding: 5rem 0;
+    a {
+        color: var(--white);
+    }
+    h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .front-news {
+        .container {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 15rem;
+            grid-template-areas:
+                "heading heading"
+                "main sidebar";
+        }
+        h2 { grid-area: heading;}
+    }
+
+    
+}

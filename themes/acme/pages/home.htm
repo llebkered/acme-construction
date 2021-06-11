@@ -1,20 +1,134 @@
 title = "Home Page"
 url = "/"
-layout = "default"
+layout = "full-width"
 is_hidden = 0
 ==
+<!-- Hero -->
 <section class="hero">
-    <h2>hero</h2>
+    <div class="container">
+        <h2>We build your dream</h2>
+    </div>
 </section>
 
+<!-- project categories -->
+<section class="categories">
+    <div class="container grid-small">
+        <div class="card">
+            <div class="card__image">
+                <a href=""><img src="{{ 'assets/images/front-homes.jpg' | theme}}" alt="Homes"></a>
+            </div>
+            <div class="card__content">
+                <a href="">Houses</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__image"><a href=""><img src="{{ 'assets/images/front-offices.jpg' | theme}}"
+                        alt="Offices"></a>
+            </div>
+            <div class="card__content">
+                <a href="">Offices</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__image"><a href=""><img src="{{ 'assets/images/front-retail.jpg' | theme}}"
+                        alt="Retail"></a>
+            </div>
+            <div class="card__content">
+                <a href="">Retail</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
 <section class="cta">
-    <button>Contact Us</button>
+    <div class="container">
+        <form action="">
+            <label for="">Name:</label>
+            <input type="text" name="" id="">
+            <label for="">Email:</label>
+            <input type="email" name="" id="">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button>Contact Us</button>
+        </form>
+    </div>
 </section>
 
-<section class="projects">
-    <h2>Projects</h2>
+<!-- Projects -->
+<section class="showcases">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="showcase">
+            <div class="showcase__image">
+                <img src="{{ 'assets/images/placeholder-project.jpg' | theme}}" alt="Project image">
+            </div>
+            <div class="showcase__content">
+                <h3>Project</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><a href="">more</a></p>
+            </div>
+        </div>
+        <div class="showcase">
+            <div class="showcase__image">
+                <img src="{{ 'assets/images/placeholder-project.jpg' | theme}}" alt="Project image">
+            </div>
+            <div class="showcase__content">
+                <h3>Project</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><a href="">more</a></p>
+            </div>
+        </div>
+        <div class="showcase">
+            <div class="showcase__image">
+                <img src="{{ 'assets/images/placeholder-project.jpg' | theme}}" alt="Project image">
+            </div>
+            <div class="showcase__content">
+                <h3>Project</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><a href="">more</a></p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="news">
-    <h2>News</h2>
+<!-- News -->
+<section class="front-news">
+    <div class="container">
+        <h2>News</h2>
+        <div class="front-news__feature">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus reprehenderit quidem provident
+                pariatur,
+                adipisci consectetur molestias et iusto minus repellendus deleniti laudantium cum veniam exercitationem
+                mollitia repudiandae culpa beatae iste!</p>
+            <p>Ducimus aspernatur fugit quidem dignissimos commodi nobis doloremque recusandae velit in perspiciatis
+                quam
+                autem quo blanditiis incidunt veritatis maiores deleniti, iste aut! Perspiciatis harum, eveniet magnam
+                dolorem architecto at dignissimos.</p>
+            <p>Ratione doloremque commodi assumenda numquam a in tenetur consectetur excepturi mollitia nobis natus
+                tempora
+                dolorum, et suscipit necessitatibus nemo accusamus ipsam laboriosam. Officia, quisquam ex quam rerum
+                veritatis aperiam cumque.</p>
+        </div>
+        <div class="front-news__list">
+            <ul>
+                <li>
+                    <h3><a href="">Lorem ipsum dolor sit.</a></h3>
+                </li>
+                <li>
+                    <h3><a href="">Lorem ipsum dolor sit.</a></h3>
+                </li>
+                <li>
+                    <h3><a href="">Lorem ipsum dolor sit.</a></h3>
+                </li>
+                <li>
+                    <h3><a href="">Lorem ipsum dolor sit.</a></h3>
+                </li>
+                <li>
+                    <h3><a href="">Lorem ipsum dolor sit.</a></h3>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>

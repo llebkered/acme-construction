@@ -1,4 +1,4 @@
-description = "Default layout"
+description = "Full Width layout"
 
 [staticPage]
 useContent = 1
@@ -21,15 +21,13 @@ default = 0
 
     <!-- Content -->
     <main class="main" id="layout-content">
-        <div class="container">
-            {% page %}
-        </div>
+        {% page %}
     </main>
 
     <!-- Footer -->
     <footer class="footer" id="layout-footer">
-        <div class="container">
-            {% partial 'site/footer' %}
+        <div class="container"></div>
+        {% partial 'site/footer' %}
         </div>
     </footer>
 

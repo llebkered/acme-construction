@@ -1,0 +1,27 @@
+.showcases {
+    padding: 5rem 0;
+  h2 {
+      text-align: center;
+  }
+}
+
+.showcase {
+    padding-bottom: 2rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 600px) {
+     .showcase {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+    }
+}

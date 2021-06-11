@@ -1,3 +1,40 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.hero {
+    background-image: url("../images/front-hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 0;
+    h2 {
+        color: var(--white);
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        max-width: 40rem;
+        padding: 0.5em 1em;
+    }
+}
+
+.categories {
+    padding: 5rem 0;
+
+    .card {
+        background-color: var(--alice-blue);
+        &__content {
+            text-align: center;
+            a {
+                color: var(--black);
+            }
+        }
+    }
+}
+
+.cta {
+    background-color: var(--alice-blue);
+    padding: 5rem 0;
+    textarea{
+        max-width: 100%;
+    }
+}
