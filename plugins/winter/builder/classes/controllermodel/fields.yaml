@@ -1,0 +1,23 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    controller:
+        label: winter.builder::lang.controller.controller
+        attributes:
+            readonly: true
+
+    toolbar:
+        type: partial
+        path: $/winter/builder/behaviors/indexcontrolleroperations/partials/_toolbar.htm
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        formBuilder: 
+            type: Winter\Builder\FormWidgets\ControllerBuilder
+            stretch: true
+            cssClass: layout
+            tab: winter.builder::lang.controller.behaviors

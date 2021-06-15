@@ -1,0 +1,24 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    fileName:
+        label: cms::lang.editor.filename
+        attributes:
+            default-focus: 1
+            spellcheck: 'false'
+
+    toolbar:
+        type: partial
+        path: $/winter/builder/behaviors/indexmodelformoperations/partials/_toolbar.htm
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        formBuilder: 
+            type: Winter\Builder\FormWidgets\FormBuilder
+            stretch: true
+            cssClass: layout
+            tab: winter.builder::lang.form.controls

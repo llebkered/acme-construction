@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    toolbar:
+        type: partial
+        path: $/winter/builder/behaviors/indexpermissionsoperations/partials/_toolbar.htm
+        cssClass: collapse-visible
+
+tabs:
+    cssClass: master-area
+    stretch: true
+    fields:
+        permissions:
+            stretch: true
+            cssClass: frameless
+            tab: winter.builder::lang.permission.form_tab_permissions
+            type: datatable
+            btnAddRowLabel: winter.builder::lang.permission.btn_add_permission
+            btnDeleteRowLabel: winter.builder::lang.permission.btn_delete_permission
+            columns:
+                permission:
+                    title: winter.builder::lang.permission.column_permission_label
+                    type: string
+                tab:
+                    title: winter.builder::lang.permission.column_tab_label
+                    type: builderLocalization
+                label:
+                    title: winter.builder::lang.permission.column_label_label
+                    type: builderLocalization

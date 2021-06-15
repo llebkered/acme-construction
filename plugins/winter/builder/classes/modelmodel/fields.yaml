@@ -1,0 +1,17 @@
+fields:
+    className:
+        label: winter.builder::lang.model.field_class_name
+
+    databaseTable:
+        label: winter.builder::lang.model.field_database_table
+        type: dropdown
+
+    addTimestamps:
+        label: winter.builder::lang.model.field_add_timestamps
+        comment: winter.builder::lang.model.field_add_timestamps_description
+        type: checkbox
+
+    addSoftDeleting:
+        label: winter.builder::lang.model.field_add_soft_deleting
+        comment: winter.builder::lang.model.field_add_soft_deleting_description
+        type: checkbox

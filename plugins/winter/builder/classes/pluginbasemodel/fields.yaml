@@ -1,0 +1,57 @@
+tabs:
+    fields:
+        content:
+            type: hint
+            path: $/winter/builder/behaviors/indexpluginoperations/partials/_plugin-update-hint.htm
+            tab: winter.builder::lang.plugin.tab_general
+            context: [update]
+
+        name:
+            span: left
+            label: winter.builder::lang.plugin.field_name
+            required: true
+            tab: winter.builder::lang.plugin.tab_general
+
+        author:
+            span: right
+            label: winter.builder::lang.plugin.field_author
+            tab: winter.builder::lang.plugin.tab_general
+            required: true
+
+        namespace:
+            context: [create]
+            span: left
+            label: winter.builder::lang.plugin.field_plugin_namespace
+            commentAbove: winter.builder::lang.plugin.field_namespace_description
+            tab: winter.builder::lang.plugin.tab_general
+            required: true
+            preset:
+                field: name
+                type: namespace
+
+        author_namespace:
+            context: [create]
+            span: right
+            label: winter.builder::lang.plugin.field_author_namespace
+            commentAbove: winter.builder::lang.plugin.field_author_namespace_description
+            tab: winter.builder::lang.plugin.tab_general
+            required: true
+            preset:
+                field: author
+                type: namespace
+
+        icon:
+            type: dropdown
+            label: winter.builder::lang.plugin.field_icon
+            commentAbove: winter.builder::lang.common.field_icon_description
+            tab: winter.builder::lang.plugin.tab_general
+
+        description:
+            label: winter.builder::lang.plugin.field_description
+            type: textarea
+            size: tiny
+            tab: winter.builder::lang.plugin.tab_description
+
+        homepage:
+            label: winter.builder::lang.plugin.field_homepage
+            tab: winter.builder::lang.plugin.tab_description

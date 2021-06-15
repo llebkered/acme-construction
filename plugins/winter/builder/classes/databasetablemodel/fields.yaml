@@ -1,0 +1,79 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: winter.builder::lang.database.field_name
+        attributes:
+            default-focus: 1
+            spellcheck: 'false'
+
+    toolbar:
+        type: partial
+        path: $/winter/builder/behaviors/indexdatabasetableoperations/partials/_toolbar.htm
+        cssClass: collapse-visible
+
+tabs:
+    stretch: true
+    cssClass: master-area
+    fields:
+        columns:
+            stretch: true
+            cssClass: frameless
+            tab: winter.builder::lang.database.tab_columns
+            type: datatable
+            btnAddRowLabel: winter.builder::lang.database.btn_add_column
+            btnDeleteRowLabel: winter.builder::lang.database.btn_delete_column
+            height: 100
+            dynamicHeight: true
+            columns:
+                name:
+                    title: winter.builder::lang.database.column_name_name
+                    validation: 
+                        required: 
+                            message: winter.builder::lang.database.column_name_required
+                        regex:
+                            pattern: ^[0-9_a-z]+$
+                            message: winter.builder::lang.database.column_validation_title
+                type:
+                    title: winter.builder::lang.database.column_name_type
+                    type: dropdown
+                    options: 
+                        integer: Integer
+                        smallInteger: Small Integer
+                        bigInteger: Big Integer
+                        date: Date
+                        time: Time
+                        dateTime: Date and Time
+                        timestamp: Timestamp
+                        string: String
+                        text: Text
+                        binary: Binary
+                        boolean: Boolean
+                        decimal: Decimal
+                        double: Double
+                    validation: 
+                        required: 
+                            message: winter.builder::lang.database.column_type_required
+                length:
+                    title: winter.builder::lang.database.column_name_length
+                    validation:
+                        regex:
+                            pattern: (^[0-9]+$)|(^[0-9]+,[0-9]+$)
+                            message: winter.builder::lang.database.column_validation_length
+                unsigned:
+                    title: winter.builder::lang.database.column_name_unsigned
+                    type: checkbox
+                allow_null:
+                    title: winter.builder::lang.database.column_name_nullable
+                    type: checkbox
+                auto_increment:
+                    title: winter.builder::lang.database.column_auto_increment
+                    type: checkbox
+                primary_key:
+                    title: winter.builder::lang.database.column_auto_primary_key
+                    type: checkbox
+                    width: 50px
+                default:
+                    title: winter.builder::lang.database.column_default

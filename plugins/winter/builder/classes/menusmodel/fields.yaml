@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    toolbar:
+        type: partial
+        path: $/winter/builder/behaviors/indexmenusoperations/partials/_toolbar.htm
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        menus:
+            stretch: true
+            tab: winter.builder::lang.menu.items
+            type: Winter\Builder\FormWidgets\MenuEditor

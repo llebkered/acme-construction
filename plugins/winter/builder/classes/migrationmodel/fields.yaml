@@ -1,0 +1,9 @@
+fields:
+    version:
+        label: winter.builder::lang.migration.field_version
+    description:
+        label: winter.builder::lang.migration.field_description
+    code:
+        label: winter.builder::lang.migration.field_code
+        type: codeeditor
+        language: php
