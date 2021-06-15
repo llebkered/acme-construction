@@ -1,0 +1,21 @@
+title = "Blog Category"
+url = "/news/category/:slug/:page?"
+layout = "default"
+
+[blogPosts]
+categoryFilter = "{{:slug}}"
+==
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
+}
+==
+{% if not category %}
+    <h2>Category not found</h2>
+{% else %}
+    <h2>{{ category.name }}</h2>
+
+    {% component 'blogPosts' %}
+{% endif %}

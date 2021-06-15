@@ -1,0 +1,17 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: ID
+    title: winter.blog::lang.post.title
+    content: winter.blog::lang.post.content
+    excerpt: winter.blog::lang.post.excerpt
+    slug: winter.blog::lang.post.slug
+    categories: winter.blog::lang.post.categories
+    author_email: winter.blog::lang.post.author_email
+    created_at: winter.blog::lang.post.created_date
+    updated_at: winter.blog::lang.post.updated_date
+    published: winter.blog::lang.post.published
+    published_at: winter.blog::lang.post.published_date

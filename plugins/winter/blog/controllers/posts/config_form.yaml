@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: winter.blog::lang.blog.create_post
+form: ~/plugins/winter/blog/models/post/fields.yaml
+modelClass: Winter\Blog\Models\Post
+defaultRedirect: winter/blog/posts
+
+create:
+    redirect: winter/blog/posts/update/:id
+    redirectClose: winter/blog/posts
+
+update:
+    redirect: winter/blog/posts
+    redirectClose: winter/blog/posts

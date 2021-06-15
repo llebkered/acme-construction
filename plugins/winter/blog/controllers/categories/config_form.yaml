@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: winter.blog::lang.blog.create_category
+form: ~/plugins/winter/blog/models/category/fields.yaml
+modelClass: Winter\Blog\Models\Category
+defaultRedirect: winter/blog/categories
+
+create:
+    redirect: winter/blog/categories/update/:id
+    redirectClose: winter/blog/categories
+
+update:
+    redirect: winter/blog/categories
+    redirectClose: winter/blog/categories

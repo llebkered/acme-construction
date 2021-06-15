@@ -1,0 +1,22 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: winter.blog::lang.category.name
+        placeholder: winter.blog::lang.category.name_placeholder
+        span: left
+
+    slug:
+        label: winter.blog::lang.category.slug
+        span: right
+        placeholder: winter.blog::lang.category.slug_placeholder
+        preset: name
+
+    description:
+        label: 'winter.blog::lang.category.description'
+        size: large
+        span: full
+        type: textarea

@@ -1,0 +1,22 @@
+title = "Blog Post"
+url = "/news/post/:slug"
+layout = "default"
+
+[blogPost]
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if (isset($this->post))
+        $this->page->title = $this->post->title;
+}
+?>
+==
+{% if post %}
+    <h2>{{ post.title }}</h2>
+
+    {% component 'blogPost' %}
+{% else %}
+    <h2>Post not found</h2>
+{% endif %}

@@ -1,9 +1,13 @@
 items:
     -
         title: 'Home Page'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: home
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -56,6 +60,15 @@ items:
         reference: projects
         cmsPage: null
         replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Latest News'
+        type: cms-page
+        code: ''
+        reference: news
         viewBag:
             isHidden: '0'
             cssClass: ''

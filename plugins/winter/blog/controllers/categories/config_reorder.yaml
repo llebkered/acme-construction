@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: winter.blog::lang.category.reorder
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: Winter\Blog\Models\Category
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

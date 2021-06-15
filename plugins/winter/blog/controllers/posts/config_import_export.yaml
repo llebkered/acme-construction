@@ -1,0 +1,41 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    # Page title
+    title: winter.blog::lang.posts.import_post
+
+    # Import List Column configuration
+    list: $/winter/blog/models/postimport/columns.yaml
+
+    # Import Form Field configuration
+    form: $/winter/blog/models/postimport/fields.yaml
+
+    # Import Model class
+    modelClass: Winter\Blog\Models\PostImport
+
+    # Redirect when finished
+    redirect: winter/blog/posts
+
+    # Required permissions
+    permissions: winter.blog.access_import_export
+
+export:
+    # Page title
+    title: winter.blog::lang.posts.export_post
+
+    # Output file name
+    fileName: posts.csv
+
+    # Export List Column configuration
+    list: $/winter/blog/models/postexport/columns.yaml
+
+    # Export Model class
+    modelClass: Winter\Blog\Models\PostExport
+
+    # Redirect when finished
+    redirect: winter/blog/posts
+
+    # Required permissions
+    permissions: winter.blog.access_import_export

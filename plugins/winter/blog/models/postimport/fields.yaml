@@ -1,0 +1,37 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    update_existing:
+        label: winter.blog::lang.import.update_existing_label
+        comment: winter.blog::lang.import.update_existing_comment
+        type: checkbox
+        default: true
+        span: left
+
+    auto_create_categories:
+        label: winter.blog::lang.import.auto_create_categories_label
+        comment: winter.blog::lang.import.auto_create_categories_comment
+        type: checkbox
+        default: true
+        span: right
+
+    categories:
+        label: winter.blog::lang.import.categories_label
+        commentAbove: winter.blog::lang.import.categories_comment
+        type: checkboxlist
+        span: right
+        cssClass: field-indent
+        trigger:
+            action: hide
+            field: auto_create_categories
+            condition: checked
+
+    default_author:
+        label: winter.blog::lang.import.default_author_label
+        comment: winter.blog::lang.import.default_author_comment
+        type: dropdown
+        placeholder: winter.blog::lang.import.default_author_placeholder
+        span: left

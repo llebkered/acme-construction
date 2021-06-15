@@ -1,0 +1,59 @@
+title = "Latest News"
+url = "/news"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/post"
+==
+{% set posts = blogPosts.posts %}
+
+<div class="post-list">
+    {% for post in posts %}
+        <article>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+            <p class="info">
+                {% if post.categories.count %}
+                    {% set categoryLinks = post.categories | map(c => "<a href=\"#{c.url}\">#{c.name}</a>") | join(', ') %}
+
+                    {{ 'winter.blog::lang.post.posted_byline' | trans({
+                        date: post.published_at | date('winter.blog::lang.post.date_format' | trans),
+                        categories: categoryLinks
+                    }) }}
+                {% else %}
+                    {{ 'winter.blog::lang.post.posted_byline_no_categories' | trans({
+                        date: post.published_at | date('winter.blog::lang.post.date_format' | trans)
+                    }) }}
+                {% endif %}
+            </p>
+
+            <p class="excerpt">{{ post.summary | raw }}</p>
+        </article>
+    {% else %}
+        <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+    {% endfor %}
+</div>
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

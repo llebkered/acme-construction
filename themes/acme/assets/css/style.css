@@ -513,7 +513,6 @@ body {
   transform: translateX(120%);
   overflow: hidden;
   transition: all ease 300ms;
-  scale: 0;
   z-index: 10;
 }
 .nav-menu li {
