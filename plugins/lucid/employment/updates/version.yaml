@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table lucid_employment_jobs'
+    - builder_table_create_lucid_employment_jobs.php

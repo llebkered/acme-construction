@@ -1,0 +1,10 @@
+name: Job
+form: $/lucid/employment/models/job/fields.yaml
+modelClass: Lucid\Employment\Models\Job
+defaultRedirect: lucid/employment/job
+create:
+    redirect: 'lucid/employment/job/update/:id'
+    redirectClose: lucid/employment/job
+update:
+    redirect: lucid/employment/job
+    redirectClose: lucid/employment/job

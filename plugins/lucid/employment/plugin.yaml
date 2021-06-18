@@ -1,0 +1,11 @@
+plugin:
+    name: 'lucid.employment::lang.plugin.name'
+    description: 'lucid.employment::lang.plugin.description'
+    author: 'Derek Bell'
+    icon: oc-icon-wrench
+    homepage: 'https://lucid.com.au'
+navigation:
+    main-menu-item:
+        label: 'Job Vacancies'
+        url: lucid/employment/job
+        icon: icon-wrench

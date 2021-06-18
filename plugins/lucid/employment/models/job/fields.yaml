@@ -1,0 +1,41 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    excerpt:
+        label: Excerpt
+        size: large
+        span: full
+        type: richeditor
+        comment: 'Short Summary'
+    content:
+        label: 'Full Text'
+        size: huge
+        span: full
+        type: richeditor
+    expiry:
+        label: 'Date picker'
+        mode: datetime
+        span: auto
+        type: datepicker
+    is_published:
+        label: Published
+        span: auto
+        type: switch
+    pd:
+        label: 'Attach PD'
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

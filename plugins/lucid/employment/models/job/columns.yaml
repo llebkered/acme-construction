@@ -1,0 +1,28 @@
+columns:
+    id:
+        label: id
+        type: number
+    title:
+        label: title
+        type: text
+    slug:
+        label: slug
+        type: text
+    excerpt:
+        label: excerpt
+        type: text
+    content:
+        label: content
+        type: text
+    expiry:
+        label: expiry
+        type: text
+    is_published:
+        label: is_published
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
