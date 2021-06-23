@@ -1,0 +1,35 @@
+title = "Job Vacancy"
+url = "/employment/:id"
+layout = "default"
+
+
+==
+
+<?php
+
+use Lucid\Employment\Models\Job;
+
+function onStart(){
+    $this['vacancy'] = Job::where('id', $this->param('id'))->with('pd')->first();
+}
+
+function onEnd()
+{
+    $this->page->title = $this['vacancy']->title;
+}
+
+?>
+==
+
+<h1>{{ this.page.title }}</h1>
+
+{{ html_clean( vacancy.content|raw)}}
+
+<p><strong>Closes</strong> {{ vacancy.expiry|date("D, d M, Y") }}</p>
+
+{% if vacancy.pd %}
+
+<p><strong>Position Description: </strong> <a href="{{ vacancy.pd.path }}">{{vacancy.pd.title}} {{ vacancy.pd.file_name
+        }}</a></p>
+
+{% endif %}

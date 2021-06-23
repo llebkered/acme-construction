@@ -5,4 +5,35 @@ description = "Current job vacancies"
 is_hidden = 0
 ==
 
-Employment
+<?php
+
+use Lucid\Employment\Models\Job;
+
+function onStart(){
+    $this['vacancies'] = Job::where('is_published', '1')->whereDate('expiry','>',now())->orderBy('expiry', 'ASC')->get();
+}
+
+?>
+
+==
+
+<h1>{{ this.page.title }}</h1>
+
+{% if vacancies|length  %}
+    {% for vacancy in vacancies %}
+    <article>
+        <h3><a href="/employment/{{ vacancy.id }}">{{ vacancy.title }}</a></h3>
+        <div class="description">
+            {{ html_clean(vacancy.excerpt|raw )}}
+        </div>
+        <p><strong>Closes</strong> {{ vacancy.expiry|date("D, d M, Y") }}</p>
+    </article>
+    {% endfor %}
+{% else %}
+
+<h2>No Vacancies</h2>
+
+<p>Sorry. No vacancies exist. Please check back later.</p>
+
+{% endif %}
+ 
