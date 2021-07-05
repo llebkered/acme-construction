@@ -1,0 +1,10 @@
+name: Categories
+form: $/lucid/projects/models/category/fields.yaml
+modelClass: Lucid\Projects\Models\Category
+defaultRedirect: lucid/projects/categories
+create:
+    redirect: 'lucid/projects/categories/update/:id'
+    redirectClose: lucid/projects/categories
+update:
+    redirect: lucid/projects/categories
+    redirectClose: lucid/projects/categories

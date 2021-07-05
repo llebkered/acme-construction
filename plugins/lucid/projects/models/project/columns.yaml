@@ -1,0 +1,22 @@
+columns:
+    title:
+        label: title
+        type: text
+    slug:
+        label: slug
+        type: text
+    is_published:
+        label: is_published
+        type: text
+    is_promoted:
+        label: is_promoted
+        type: text
+    category_id:
+        label: category_id
+        type: number
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime

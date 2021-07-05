@@ -1,0 +1,52 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    excerpt:
+        label: Excerpt
+        size: small
+        span: full
+        type: richeditor
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    thumbnail:
+        label: Thumbnail
+        mode: image
+        imageWidth: '120'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    featured_image:
+        label: 'Featured Image'
+        mode: image
+        imageWidth: '600'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    is_published:
+        label: Published
+        span: auto
+        type: switch
+    category:
+        label: Relation
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation

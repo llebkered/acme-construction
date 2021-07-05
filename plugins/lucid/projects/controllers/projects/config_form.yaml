@@ -1,0 +1,10 @@
+name: Projects
+form: $/lucid/projects/models/project/fields.yaml
+modelClass: Lucid\Projects\Models\Project
+defaultRedirect: lucid/projects/projects
+create:
+    redirect: 'lucid/projects/projects/update/:id'
+    redirectClose: lucid/projects/projects
+update:
+    redirect: lucid/projects/projects
+    redirectClose: lucid/projects/projects

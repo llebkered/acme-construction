@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table lucid_projects_projects'
+    - builder_table_create_lucid_projects_projects.php
+1.0.3:
+    - 'Created table lucid_projects_categories'
+    - builder_table_create_lucid_projects_categories.php

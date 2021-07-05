@@ -1,0 +1,20 @@
+plugin:
+    name: 'lucid.projects::lang.plugin.name'
+    description: 'lucid.projects::lang.plugin.description'
+    author: 'Derek Bell'
+    icon: oc-icon-tasks
+    homepage: 'https://lucid.com.au'
+navigation:
+    main-menu-item:
+        label: Projects
+        url: lucid/projects/projects
+        icon: icon-tasks
+        sideMenu:
+            side-menu-item:
+                label: Projects
+                url: lucid/projects/projects
+                icon: icon-tasks
+            side-menu-item2:
+                label: Categories
+                url: lucid/projects/categories
+                icon: icon-tag

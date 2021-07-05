@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: id
+        type: number
+    title:
+        label: title
+        type: text
+    slug:
+        label: slug
+        type: text
+    is_published:
+        label: is_published
+        type: text
