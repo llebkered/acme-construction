@@ -1,0 +1,50 @@
+title = "Category"
+url = "/projects/category/:slug/:page?"
+layout = "default"
+
+==
+<?php
+use Lucid\Projects\Models\Category;
+
+function onStart(){
+    $this['category'] = Category::where('slug', $this->param('slug'))->with(['featured_image','projects'])->first();
+}
+
+
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
+}
+
+?>
+==
+
+{% if not category %}
+
+<h2>Category not found</h2>
+
+{% else %}
+
+<img src="{{ category.featured_image.path }}" alt="{{ category.title }}">
+
+<h1>{{ category.title }}</h1>
+{{ html_clean(category.description) |raw }}
+
+<h2>Projects</h2>
+
+{% for item in category.projects %}
+<div class="showcase">
+    <div class="showcase__image">
+        <img src="{{ item.thumbnail.path }}" alt="Thumbnail: {{ item.title }}">
+    </div>
+    <div class="showcase__content">
+        <h3>{{ item.title}}</h3>
+        {{ html_clean(item.excerpt)|raw }}
+        <p><a href="/project/{{ item.slug }}">more</a></p>
+    </div>
+</div>
+{% endfor %}
+
+{% endif %}

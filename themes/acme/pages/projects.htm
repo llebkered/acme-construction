@@ -3,4 +3,29 @@ url = "/projects"
 layout = "default"
 is_hidden = 0
 ==
-Projects
+
+<?php
+
+use Lucid\Projects\Models\Project;
+
+function onStart(){
+   
+    $this['projects'] = Project::where('is_published', '1')->with(['thumbnail', 'category'])->get();
+}
+
+?>
+
+==
+
+{% for item in projects %}
+<div class="showcase">
+    <div class="showcase__image">
+        <img src="{{ item.thumbnail.path }}" alt="Thumbnail: {{ item.title}}">
+    </div>
+    <div class="showcase__content">
+        <h3>{{ item.title}}</h3>
+        {{ html_clean(item.excerpt)|raw }}
+        <p><a href="/project/{{ item.slug }}">more</a></p>
+    </div>
+</div>
+{% endfor %}

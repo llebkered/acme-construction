@@ -1,0 +1,36 @@
+title = "Blog Post"
+url = "/project/:slug"
+layout = "default"
+
+
+==
+
+<?php
+
+use Lucid\Projects\Models\Project;
+
+function onStart(){
+    $this['project'] = Project::where('slug', $this->param('slug'))->with(['featured_image','category'])->first();
+}
+
+function onEnd()
+{
+    $this->page->title = $this['project']->title;
+}
+
+?>
+==
+
+{% if project %}
+    <div class="featured-image">
+        <img src="{{ project.featured_image.path }}" alt="{{ project.title }}">
+    </div>
+    <h1>{{ project.title }}</h1>
+    {{ html_clean(project.description) |raw }}
+
+    <div>Category: <a href="/projects/category/{{ project.category.slug }}">{{ project.category.title }}</a></div>
+
+
+{% else %}
+    <h2>Project not found</h2>
+{% endif %}

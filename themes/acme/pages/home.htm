@@ -11,6 +11,21 @@ sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 ==
+
+<?php
+
+use Lucid\Projects\Models\Category;
+use Lucid\Projects\Models\Project;
+
+function onStart(){
+    $this['categories'] = Category::where('is_published', '1')->with('thumbnail')->get();
+    $this['projects'] = Project::where('is_published', '1')->with('thumbnail')->get();
+}
+
+?>
+
+==
+
 <!-- Hero -->
 <section class="hero">
     <div class="container">
@@ -21,30 +36,16 @@ postPage = "blog/post"
 <!-- project categories -->
 <section class="categories">
     <div class="container grid-small">
+        {% for item in categories %}
         <div class="card">
             <div class="card__image">
-                <a href=""><img src="{{ 'assets/images/front-homes.jpg' | theme}}" alt="Homes"></a>
+                <a href="/projects/category/{{item.slug}}"><img src="{{ item.thumbnail.path }}" alt="thumbnail: {{item.title}}"></a>
             </div>
             <div class="card__content">
-                <a href="">Houses</a>
+                <a href="/projects/category/{{item.slug}}">{{item.title}}</a>
             </div>
         </div>
-        <div class="card">
-            <div class="card__image"><a href=""><img src="{{ 'assets/images/front-offices.jpg' | theme}}"
-                        alt="Offices"></a>
-            </div>
-            <div class="card__content">
-                <a href="">Offices</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card__image"><a href=""><img src="{{ 'assets/images/front-retail.jpg' | theme}}"
-                        alt="Retail"></a>
-            </div>
-            <div class="card__content">
-                <a href="">Retail</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -66,37 +67,19 @@ postPage = "blog/post"
 <section class="showcases">
     <div class="container">
         <h2>Projects</h2>
+        {% for item in projects %}
+        <div class="showcase">
+            <div class="showcase__image">
+                <img src="{{ item.thumbnail.path }}" alt="Thumbnail: {{ item.title}}">
+            </div>
+            <div class="showcase__content">
+                <h3>{{ item.title}}</h3>
+                {{ html_clean(item.excerpt)|raw }}
+                <p><a href="/project/{{ item.slug }}">more</a></p>
+            </div>
+        </div>
+        {% endfor %}
 
-        <div class="showcase">
-            <div class="showcase__image">
-                <img src="{{ 'assets/images/placeholder-project.jpg' | theme}}" alt="Project image">
-            </div>
-            <div class="showcase__content">
-                <h3>Project</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p><a href="">more</a></p>
-            </div>
-        </div>
-        <div class="showcase">
-            <div class="showcase__image">
-                <img src="{{ 'assets/images/placeholder-project.jpg' | theme}}" alt="Project image">
-            </div>
-            <div class="showcase__content">
-                <h3>Project</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p><a href="">more</a></p>
-            </div>
-        </div>
-        <div class="showcase">
-            <div class="showcase__image">
-                <img src="{{ 'assets/images/placeholder-project.jpg' | theme}}" alt="Project image">
-            </div>
-            <div class="showcase__content">
-                <h3>Project</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <p><a href="">more</a></p>
-            </div>
-        </div>
     </div>
 </section>
 

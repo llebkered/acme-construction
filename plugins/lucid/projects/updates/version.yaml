@@ -6,3 +6,6 @@
 1.0.3:
     - 'Created table lucid_projects_categories'
     - builder_table_create_lucid_projects_categories.php
+1.0.4:
+    - 'Updated table lucid_projects_categories: fix typo in description'
+    - builder_table_update_lucid_projects_categories.php

@@ -591,6 +591,9 @@ body {
   .showcase:nth-child(odd) {
     flex-direction: row-reverse;
   }
+  .showcase__content, .showcase__image {
+    flex: 1 1;
+  }
 }
 @media only screen and (min-width: 600px) {
   #menuButton {
