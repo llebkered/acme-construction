@@ -1,0 +1,61 @@
+{% if formSentAlias == __SELF__.alias and formError is empty and settingsGet('form_hide_after_success', 0) %}
+
+	{# no errors and set to hide after send #}
+
+{% else %}
+
+	{{ form_open(__SELF__.getFormAttributes) }}
+
+		{% for field in __SELF__.fields %}
+
+			{{ __SELF__.getFieldHtmlCode(field)|raw }}
+
+		{% endfor %}
+
+		{{ __SELF__.getAntispamFieldHtmlCode({})|raw }}
+
+		{{ __SELF__.getDescriptionFieldHtmlCode({})|raw }}
+		
+		{{ __SELF__.getRedirectFieldHtmlCode({})|raw }}
+
+		{% if (settingsGet('google_recaptcha_version') is null or settingsGet('google_recaptcha_version') == 'v2checkbox') and settingsGet('add_google_recaptcha') and settingsGet('google_recaptcha_site_key') %}
+
+			<div class="{{__SELF__.getReCaptchaWrapperClass()}}">
+
+				<div class="g-recaptcha" data-sitekey="{{ settingsGet('google_recaptcha_site_key') }}"></div>
+
+			</div>
+
+		{% endif %}
+
+		{{ __SELF__.getSubmitButtonHtmlCode({})|raw }}
+
+	{{ form_close() }}
+
+	{% if settingsGet('add_google_recaptcha') and settingsGet('google_recaptcha_scripts_allow') %}
+	
+		<script src='https://www.google.com/recaptcha/api.js{{ settingsGet("google_recaptcha_locale_allow") and currentLocale ? ("?hl="~currentLocale) }}' async defer></script>
+
+		{% if settingsGet('google_recaptcha_version') == 'v2invisible' %}
+
+			<script>
+				
+				function onSubmit_{{ __SELF__.alias }}(token) {
+
+					return new Promise(function(resolve, reject) { 
+
+						//Your code logic goes here
+
+						document.getElementById("{{'scf-form-id-'~__SELF__.alias}}").submit();
+						resolve();
+
+					}); //end promise
+				}
+
+			</script>
+
+		{% endif %}
+
+	{% endif %}
+
+{% endif %}

@@ -1,0 +1,77 @@
+subject = "Contact form confirmation"
+==
+
+Hello,
+
+this is a confirmation from Contact form.
+
+{% if fieldsDetails|length %}
+You have sent this:
+
+<table border="0">
+
+    <tbody>
+
+        {% for field in fieldsDetails %}
+
+            {% if field.label == 'form_description' or field.label == 'form_alias' %}
+            {% else %}
+
+                <tr>
+                    <th style="vertical-align: top; text-align: left; padding-right: 10px;">{{ field.label }}</th>
+                    <td style="text-align: left;">{{ field.value|raw|nl2br }}</td>
+                    <th>{{field.label}}</th>
+                </tr>
+
+            {% endif %}
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endif %}
+
+
+Best regards,
+
+Contact form
+
+
+==
+
+<p>Hello,</p>
+
+<p>this is a confirmation from Contact form.</p>
+
+{% if fieldsDetails|length %}
+
+<br>
+
+<p>You have sent this:</p>
+
+<table border="0">
+
+    <tbody>
+
+		{% for field in fieldsDetails %}
+
+			<tr>
+				<th style="vertical-align: top; text-align: left; padding-right: 10px;">{{ field.label }}</th>
+				<td style="text-align: left;">{{ field.value|raw|nl2br }}</td>
+			</tr>
+
+		{% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endif %}
+
+<br>
+
+<p>Best regards,<br>
+
+Contact form</p>

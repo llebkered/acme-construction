@@ -10,6 +10,10 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
+
+
+[contactForm]
+
 ==
 
 <?php
@@ -39,7 +43,8 @@ function onStart(){
         {% for item in categories %}
         <div class="card">
             <div class="card__image">
-                <a href="/projects/category/{{item.slug}}"><img src="{{ item.thumbnail.path }}" alt="thumbnail: {{item.title}}"></a>
+                <a href="/projects/category/{{item.slug}}"><img src="{{ item.thumbnail.path }}"
+                        alt="thumbnail: {{item.title}}"></a>
             </div>
             <div class="card__content">
                 <a href="/projects/category/{{item.slug}}">{{item.title}}</a>
@@ -52,14 +57,8 @@ function onStart(){
 <!-- CTA -->
 <section class="cta">
     <div class="container">
-        <form action="">
-            <label for="">Name:</label>
-            <input type="text" name="" id="">
-            <label for="">Email:</label>
-            <input type="email" name="" id="">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <button>Contact Us</button>
-        </form>
+        <h2>Get in touch</h2>
+        {% component 'contactForm' %}
     </div>
 </section>
 
@@ -87,7 +86,7 @@ function onStart(){
 <section class="front-news">
     <div class="container">
         <h2>News</h2>
-        
+
         {% set posts = blogPosts.posts %}
 
         <div class="front-news__feature">
@@ -98,13 +97,13 @@ function onStart(){
         </div>
         <div class="front-news__list">
             {% for post in posts %}
-            
-                <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 
-           
-        {% else %}
+            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+
+
+            {% else %}
             <p class="no-data">{{ blogPosts.noPostsMessage }}</p>
-        {% endfor %}
+            {% endfor %}
         </div>
     </div>
 </section>

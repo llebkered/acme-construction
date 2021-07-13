@@ -1,0 +1,71 @@
+subject = "Oznámení o odeslání kontaktního formuláře"
+==
+
+Dobrý den,
+
+toto je oznámení o odeslání kontaktního formuláře.
+
+{% if fields|length %}
+Odeslaný obsah:
+
+<table border="0">
+
+	<tbody>
+
+		{% for key,value in fields %}
+
+			<tr>
+				<th style="vertical-align: top; text-align: left; padding-right: 10px;">{{ key|upper }}</th>
+				<td style="text-align: left;">{{ value|raw|nl2br }}</td>
+			</tr>
+	
+		{% endfor %}
+
+	</tbody>
+
+</table>
+
+{% endif %}
+
+
+S pozdravem,
+
+Kontaktní formulář
+
+
+==
+
+<p>Dobrý den,</p>
+
+<p>toto je oznámení o odeslání kontaktního formuláře.</p>
+
+{% if fields|length %}
+
+<br>
+
+<p>Odeslaný obsah:</p>
+
+<table border="0">
+
+	<tbody>
+
+		{% for key,value in fields %}
+
+			<tr>
+				<th style="vertical-align: top; text-align: left; padding-right: 10px;">{{ key|upper }}</th>
+				<td style="text-align: left;">{{ value|raw|nl2br }}</td>
+			</tr>
+
+		{% endfor %}
+
+	</tbody>
+
+</table>
+
+{% endif %}
+
+<br>
+
+<p>S pozdravem,<br>
+
+Kontaktní formulář</p>

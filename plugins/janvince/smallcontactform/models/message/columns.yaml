@@ -1,0 +1,67 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    # id:
+    #     label: janvince.smallgallery::lang.categories.columns.id
+    #     searchable: true
+
+    new_message:
+        label: janvince.smallcontactform::lang.models.message.columns.new_message
+        type: switch_icon_star
+
+    created_at:
+        label: janvince.smallcontactform::lang.models.message.columns.datetime
+        type: datetime
+        searchable: true
+
+    name:
+        label: janvince.smallcontactform::lang.models.message.columns.name
+        searchable: true
+
+    email:
+        label: janvince.smallcontactform::lang.models.message.columns.email
+        searchable: true
+
+    message:
+        label: janvince.smallcontactform::lang.models.message.columns.message
+        searchable: true
+        type: text_preview
+        width: 50%
+
+    remote_ip:
+        label: janvince.smallcontactform::lang.models.message.columns.remote_ip
+        searchable: true
+        type: text
+        invisible: true
+
+    form_alias:
+        label: janvince.smallcontactform::lang.models.message.columns.form_alias
+        searchable: true
+        type: text
+        invisible: true
+
+    form_description:
+        label: janvince.smallcontactform::lang.models.message.columns.form_description
+        searchable: true
+        type: text_preview
+        invisible: true
+
+    form_data:
+        label: janvince.smallcontactform::lang.models.message.columns.form_data
+        searchable: true
+        type: text
+        invisible: true
+
+    url:
+        label: janvince.smallcontactform::lang.models.message.columns.url
+        searchable: true
+        type: text
+        invisible: true
+
+    uploads:
+        label: janvince.smallcontactform::lang.models.message.columns.files
+        type: scf_files_link
+        invisible: true
