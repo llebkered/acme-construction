@@ -1,0 +1,18 @@
+.control-label {
+    min-width: 7rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: map-get($breakpoints , medium )) {
+    .form-group {
+        flex-direction: row;
+        .button-primary {
+            margin-left: 6em;
+        }
+    }
+}
